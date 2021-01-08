@@ -1,2 +1,2 @@
 # formulario1
-Formulário feito em HTML e CSS
+Projeto de formulário usando HTML e CSS
