@@ -6,6 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <!--Fonte customizada do google usada no projeto:-->   
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
 
     <title>Cadastro</title>
 
@@ -14,30 +17,30 @@
 <body>
     
     <div>
-        <h1>Cadastro de desenvolvedores</h1>
-        <p>Complete suas informações</p>
+        <h1 id="titulo">Cadastro de desenvolvedores</h1>
+        <p id="subtitulo">Complete suas informações</p>
     </div>
 
     <form action="">
-        <fieldset>
+        <fieldset class="grupo">
           <div>
-              <label>Nome</label>
-              <input type="text" name="nome" id="nome">
+              <label for="nome"><strong>Nome</strong></label>
+              <input type="text" name="nome" id="nome" required>
           </div>
 
-          <div>
-            <label>Sobrenome</label>
-            <input type="text" name="sobrenome" id="sobrenome">
+          <div class="campo">
+            <label for="sobrenome"><strong>Sobrenome</strong></label>
+            <input type="text" name="sobrenome" id="sobrenome" required>
           </div>
         </fieldset>
 
-        <div>
-            <label>E-mail</label>
-            <input type="email" name="email" id="email">
+        <div class="campo">
+            <label for="email"><strong>E-mail</strong></label>
+            <input type="email" name="email" id="email" required>
         </div>
 
-        <div>
-            <label>Qual o lado da aplicação você desenvolve?</label>
+        <div class="campo">
+            <label><strong>Qual o lado da aplicação você desenvolve?</strong></label>
             <label>
                 <input type="radio" name="devweb" value="frontend" checked>Front-end
             </label>
@@ -51,8 +54,8 @@
             </label>
         </div>
 
-        <div>
-            <label>Nível de conhecimento?</label>
+        <div class="campo">
+            <label for="nivel"><strong>Nível de conhecimento?</strong></label>
 
             <select name="nivel" id="conhecimento">
                 <option value="" selected disabled>Selecione uma opção</option>
@@ -62,9 +65,9 @@
             </select>
         </div>
 
-        <fieldset>
-            <div>
-                <label>Selecione as tecnologias que utiliza:</label>
+        <fieldset class="grupo">
+            <div id="check">
+                <label><strong>Selecione as tecnologias que você utiliza:</strong></label>
                 <input type="checkbox" id="tecnologia1" value="HTML">
                 <label for="tecnologia1">HTML</label>
 
@@ -88,12 +91,12 @@
             </div>
         </fieldset>
 
-        <div>
-            <label>Conte um pouco da sua experiência:</label>
+        <div class="campo">
+            <label><strong>Conte um pouco da sua experiência:</strong></label>
             <textarea name="area_texto1" id="experiencia" rows="5" cols="40"></textarea>
         </div>
 
-        <button type="submit">Finalizar</button>
+        <button type="submit" class="botao">Finalizar</button>
     </form>
 </body>
 
